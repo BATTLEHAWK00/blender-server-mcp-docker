@@ -1,0 +1,21 @@
+[project]
+name = "blender-server"
+version = "0.1.0"
+description = "Containerized Blender MCP server with NVIDIA GPU rendering"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "mcp>=1.12,<2"]
+
+[dependency-groups]
+dev = ["pytest>=8,<9", "httpx>=0.28,<1", "ruff>=0.11,<1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[[tool.uv.index]]
+name = "ustc"
+url = "https://mirrors.ustc.edu.cn/pypi/simple"
+default = true
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

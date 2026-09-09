@@ -1,0 +1,13 @@
+# Only runtime inputs enter the build context.
+**
+!Dockerfile
+!pyproject.toml
+!uv.lock
+!README.md
+!THIRD_PARTY_NOTICES.md
+!blender_server/
+!blender_server/**
+!vendor/
+!vendor/**
+**/__pycache__/
+**/*.py[cod]
